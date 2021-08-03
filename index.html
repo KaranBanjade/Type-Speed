@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Type</title>
+</head>
+<body>
+    <style>
+        html{
+            font-family: 'Roboto Mono', monospace;
+            background-color:rgb(219, 219, 219)
+            }
+        h1{
+            text-align: center;
+            font-size: 3em;
+            font-weight:bolder;
+            /* text-decoration: underline rgb(255, 255, 255) double; */
+        }
+        input{
+            /* background-color: rgb(255, 123, 0); */
+            width: 30%;
+            align-self: center;
+            margin: auto;
+            font-size: 2em;
+            display: flex;
+            }
+        p{
+            /* border: solid rgb(226, 154, 154) 5px; */
+            font-weight: 600;
+         }
+         #single{
+             text-align: center;
+            font-size: 5em; 
+            color:blue; 
+            text-decoration: underline solid;
+         }
+         #count{
+             width: 10%;
+             background-color: white;
+             text-align: center;
+         }
+    </style>
+    <h1>TYPE RACER BY KARAN</h1>
+    <div class="countdown" id="cntdn">
+        <input type="text" name="count" id="count" value = 00>
+    </div>
+    <div id="main">
+        <p class="Check" id="Check" style="font-size: 1.2em;">
+        <!-- Whole text is Shown here -->
+        </p>
+        <div id="single">
+            <!-- Changing Data comes here -->
+        </div>
+        <input type="text" id="InpText">
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
