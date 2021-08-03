@@ -9,9 +9,15 @@ const tests = [
     "Web designers are expected to have an awareness of usability and if their role involves creating mark up then they are also expected to be up to date with web accessibility guidelines. The different areas of web design include web graphic design; interface design; authoring, including standardised code and proprietary software; user experience design; and search engine optimization. ",
     "A freelancer or freelance worker, is a term commonly used for a person who is self-employed and is not necessarily committed to a particular employer long-term. Freelance workers are sometimes represented by a company or a temporary agency that resells freelance labor to clients; others work independently or use professional associations or websites to get work. While the term 'independent contractor' would be used in a higher register of English to designate the tax and employment classes of this type of worker, the term freelancing is most common in culture and creative industries and this term specifically motions to participation therein. Fields, professions, and industries where freelancing is predominant include: music, writing, acting, computer programming, web design, graphic design, translating and illustrating, film and video production and other forms of piece work which some cultural theorists consider as central to the cognitive-cultural economy. ",
     "Closed captions were created for deaf or hard of hearing individuals to assist in comprehension. They can also be used as a tool by those learning to read, learning to speak a non-native language, or in an environment where the audio is difficult to hear or is intentionally muted. ",
+    "This is the smallest test. ",
+    "This is the smallest test. ",
+    "This is the smallest test. ",
+    "This is the smallest test. ",
+    "This is the smallest test. ",
+    "This is the smallest test. ",
     "This is the smallest test. "
 ]
-let num = Math.floor(Math.random()*11);
+let num = Math.floor(Math.random()*19);
 let words = tests[num].split(" ");
 let letters = tests[num].split("");
 let seen = document.getElementById("Check");
@@ -25,13 +31,12 @@ let ans = "";
 let interval;
 let val;
 let timeCheck = false;
-
+let temp=0;
 function time(){
     val = parseInt(timer.value);
     timeCheck = true;
     interval = setInterval(() => {
         timer.value = ++val;
-        console.log(timer.value);
     }, 1000);
 }
 
@@ -58,7 +63,7 @@ function highlight(word, work)
 }
 
 single.innerText = words[w];
-text.addEventListener("keypress",(e)=>{
+text.addEventListener("keydown",(e)=>{
         if(timeCheck == false)
             time();
         if(w+1 == words.length){
@@ -74,10 +79,13 @@ text.addEventListener("keypress",(e)=>{
                 text.value = "";
                 highlight(w,1);
                 single.innerText = words[++w];
+                temp = l;
             }
         }
         else
         {
+            text.value = "";
+            l=temp;
             highlight(w,-1);
             single.style.color = "Red";
         }
